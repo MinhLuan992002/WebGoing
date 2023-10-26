@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +22,8 @@ import { AccountModalComponent } from './backpage/account.modal/account.modal.co
 import { HttpClientModule } from '@angular/common/http';
 import { PayComponent } from './pay/pay.component';
 import { NewProductComponent } from './new-product/new-product.component';
-
+import { PersonalProfileComponent } from './personal-profile/personal-profile.component';
+import { AccountSidebarComponent } from './account-sidebar/account-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -44,21 +45,18 @@ import { NewProductComponent } from './new-product/new-product.component';
     AccountModalComponent,
     PayComponent,
     NewProductComponent,
-
-
+    PersonalProfileComponent,
+    AccountSidebarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  
-  bootstrap:
-   [AppComponent]
-  
+
+  bootstrap: [AppComponent],
 })
-
-
 export class AppModule {}
